@@ -10,7 +10,7 @@ const Navbar = (props) => {
         <Link className="nav" to="/allproducts">
           All Products
         </Link>
-        <Link className="nav" to="/mycart">
+        <Link className="nav" to="/cart">
           My Cart
         </Link>
         <Link className="nav" to="/myorder">

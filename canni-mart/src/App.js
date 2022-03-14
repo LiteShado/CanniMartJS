@@ -5,6 +5,8 @@ import { Route, Redirect } from "react-router-dom";
 import Navbar from "./components/Navbar.js";
 import Home from "./pages/Home.js";
 import AllProducts from "./pages/AllProducts.js";
+import Cart from "./pages/Cart.js";
+import MyOrder from "./pages/MyOrder.js";
 
 function App() {
   return (
@@ -28,6 +30,22 @@ function App() {
         render={() => {
           return <AllProducts />;
         }}
+      />
+
+      <Route
+      path="/cart"
+      exact
+      render={() => {
+        return <Cart />
+      }}
+      />
+
+      <Route
+      path="/myorder"
+      exact
+      render={() => {
+        return <MyOrder />
+      }}
       />
     </div>
   );
