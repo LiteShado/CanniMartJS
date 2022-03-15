@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
 import CartCSS from "../css/CartCSS.css";
 
 const Cart = (props) => {
@@ -98,8 +97,6 @@ const Cart = (props) => {
 
           <input id="submit-button" type="submit" value="Buy" />
         </form>
-
-        {redirectToOrder && <Redirect to="/myorder"></Redirect>}
       </div>
     </div>
   );
