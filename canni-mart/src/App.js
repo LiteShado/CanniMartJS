@@ -10,6 +10,7 @@ import MyOrder from "./pages/MyOrder.js";
 import Product from "./components/Product.js";
 import OrderDetail from "./components/OrderDetail.js";
 import ProductList from "./components/ProductList.js";
+import FilteredResults from "./pages/FilteredResults";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <div className="navbar-container">
         <Navbar />
         <p>Hello from App</p>
-        <Searchbar placeholder="Enter your search term" data={ProductList} />
+        <Searchbar placeholder="Enter your search term" />
       </div>
 
       <Route
@@ -29,10 +30,10 @@ function App() {
       />
 
       <Route
-        path="/allproducts"
+        path="/results"
         exact
         render={() => {
-          return <AllProducts />;
+          return <FilteredResults />;
         }}
       />
 
