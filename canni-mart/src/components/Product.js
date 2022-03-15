@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Product = (props) => {
+
   const [productDetail, setProductDetail] = useState({});
+  const { id } = useParams();
 
   const fetchDetail = () => {
     axios.get(`${process.env.REACT_APP_BACKEND_URL}`).then((response) => {

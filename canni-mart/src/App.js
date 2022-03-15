@@ -8,6 +8,7 @@ import AllProducts from "./pages/AllProducts.js";
 import Cart from "./pages/Cart.js";
 import MyOrder from "./pages/MyOrder.js";
 import Product from "./components/Product.js";
+import OrderDetail from "./components/OrderDetail.js";
 
 function App() {
   return (
@@ -34,29 +35,34 @@ function App() {
       />
 
       <Route
-      path="/cart"
-      exact
-      render={() => {
-        return <Cart />
-      }}
+        path="/cart"
+        exact
+        render={() => {
+          return <Cart />;
+        }}
       />
 
       <Route
-      path="/myorder"
-      exact
-      render={() => {
-        return <MyOrder />
-      }}
+        path="/myorder"
+        exact
+        render={() => {
+          return <MyOrder />;
+        }}
       />
 
       <Route
-      path="/product/:id"
-      exact
-      render={() =>{
-        return <Product />
-      }}
+        path="/product/:id"
+        render={() => {
+          return <Product />;
+        }}
       />
 
+      <Route
+        path="/order/:id"
+        render={() => {
+          return <OrderDetail />;
+        }}
+      />
     </div>
   );
 }
