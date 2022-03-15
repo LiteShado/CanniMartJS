@@ -7,6 +7,7 @@ import Home from "./pages/Home.js";
 import AllProducts from "./pages/AllProducts.js";
 import Cart from "./pages/Cart.js";
 import MyOrder from "./pages/MyOrder.js";
+import Product from "./components/Product.js";
 
 function App() {
   return (
@@ -47,6 +48,15 @@ function App() {
         return <MyOrder />
       }}
       />
+
+      <Route
+      path="/product/:id"
+      exact
+      render={() =>{
+        return <Product />
+      }}
+      />
+
     </div>
   );
 }
